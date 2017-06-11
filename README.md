@@ -1,5 +1,5 @@
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
-[![GNU Prolog Version](https://img.shields.io/badge/GNU%20Prolog-1.4.4-blue.svg)]()
+[![SWI Prolog Version](https://img.shields.io/badge/SWI%20Prolog-7.2.3-blue.svg)]()
 
 # NxN Sudoku Solver
-NxN sudoku solver in GNU Prolog.
+NxN sudoku solver in Prolog.  This implementation uses [SWI Prolog](http://www.swi-prolog.org/).
