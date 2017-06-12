@@ -12,23 +12,21 @@ sudoku(Rows) :-                     % expects list of lists
   print_solution(Rows).
 
 validate_blocks(_, []).
-validate_blocks(Size, Rows) :-
-  Domain ins 1..Size,
-  Block_Height is floor(sqrt(Size)),
-  Block_Width is ceiling(sqrt(Size)),
+validate_blocks(Rows) :-
+  Block_Height is floor(sqrt(length(Rows))),
+  Block_Width is ceiling(sqrt(length(Rows))),
   Block_Length is Block_Height * Block_Width,
-  split_at(Block_Height, Rows, First_Rows, Rest_Rows),          % get first set of rows to get blocks from
-  transpose(First_Rows, Block_Columns),                         % setup columns to easily pull out blocks from first set of rows
-  flatten(Block_Columns, Flattened_Blocks),                     % flatten columns (now that blocks are all next to each other)
-  validate_row_blocks(Domain, Block_Length, Flattened_Blocks),  % validate the blocks from this set of rows
+  split_at(Block_Height, Rows, First_Rows, Rest_Rows),  % get first set of rows to get blocks from
+  transpose(First_Rows, Block_Columns),                 % setup columns to easily pull out blocks from first set of rows
+  flatten(Block_Columns, Flattened_Blocks),             % flatten columns (now that blocks are all next to each other)
+  validate_row_blocks(Block_Length, Flattened_Blocks),  % validate the blocks from this set of rows
   validate_blocks(Size, Rest_Rows).
 
-validate_row_blocks(_, _, []).
-validate_row_blocks(Domain, Block_Length, List) :-
-  take(Block_Length, List, First_Block, Rest),      % get first block from this set of rows
-  append(First_Block, Domain),                      % make sure all cells in block contain valid values
-  all_distinct(First_Block),                        % make sure all cells in block are distinct
-  validate_row_blocks(Domain, Block_Length, Rest).  % recursively validate rest of blocks in this set of rows
+validate_row_blocks(_, []).
+validate_row_blocks(Block_Length, List) :-
+  take(Block_Length, List, First_Block, Rest),  % get first block from this set of rows
+  all_distinct(First_Block),                    % make sure all cells in block are distinct
+  validate_row_blocks(Block_Length, Rest).      % recursively validate rest of blocks in this set of rows
 
 print_solution([]).
 print_solution([Head|Tail]) :-
