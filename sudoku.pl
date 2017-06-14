@@ -1,5 +1,6 @@
+:- module(sudoku, [sudoku/1])
 :- use_module(library(clpfd)).
-:- use_module(library(list_util)).  % for split_at/4
+:- use_module(library(list_util), [split_at/4]).
 
 sudoku(Rows) :-                     % expects list of lists
   length(Rows, Size),               % determine size of input puzzle

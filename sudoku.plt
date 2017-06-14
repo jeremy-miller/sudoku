@@ -1,9 +1,11 @@
-:- begin_tests(sudoku)
+:- use_module(sudoku).
 
-test(sudoku) :-  % 4x4
+:- begin_tests(sudoku_tests).
+
+test(sudoku_4x4) :-
   sudoku([[_,_,2,3],[_,_,_,_],[_,_,_,_],[3,4,_,_]]).
 
-test(sudoku) :-  % 9x9
+test(sudoku_9x9) :-
   sudoku([[_,_,_,_,_,_,_,_,_],[_,_,_,_,_,3,_,8,5],[_,_,1,_,2,_,_,_,_],[_,_,_,5,_,7,_,_,_],[_,_,4,_,_,_,1,_,_],[_,9,_,_,_,_,_,_,_],[5,_,_,_,_,_,_,7,3],[_,_,2,_,1,_,_,_,_],[_,_,_,_,4,_,_,_,9]]).
 
-:- end_tests(sudoku)
+:- end_tests(sudoku_tests).
