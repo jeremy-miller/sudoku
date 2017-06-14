@@ -2,15 +2,18 @@
 :- use_module(library(clpfd)).
 :- use_module(library(list_util), [split_at/4]).
 
-sudoku(Rows) :-                     % expects list of lists
-  length(Rows, Size),               % determine size of input puzzle
-  append(Rows, Domain),             % make sure all values in rows contain valid values
-  Domain ins 1..Size,               % set range of valid values
-  maplist(all_distinct, Rows),      % make sure all row values are distinct
-  transpose(Rows, Columns),         % generate all columns from exisitng rows
-  maplist(all_distinct, Columns),   % make sure all column values are distinct
-  validate_all_blocks(Rows),        % make sure all blocks are distinct
-  maplist(label, Rows),             % make sure all cells have only one value
+sudoku(Rows) :-
+  once(solve(Rows)).                                    % only get the first solution
+
+solve(Rows) :-
+  length(Rows, Size),                                   % determine size of input puzzle
+  append(Rows, Domain),                                 % make sure all values in rows contain valid values
+  Domain ins 1..Size,                                   % set range of valid values
+  maplist(all_distinct, Rows),                          % make sure all row values are distinct
+  transpose(Rows, Columns),                             % generate all columns from exisitng rows
+  maplist(all_distinct, Columns),                       % make sure all column values are distinct
+  validate_all_blocks(Rows),                            % make sure all blocks are distinct
+  maplist(label, Rows),                                 % make sure all cells have only one value
   print_solution(Rows).
 
 validate_all_blocks([]).
@@ -27,9 +30,9 @@ validate_all_blocks(Rows) :-
 
 validate_row_blocks(_, []).
 validate_row_blocks(Block_Length, List) :-
-  split_at(Block_Length, List, First_Block, Rest),  % get first block from this set of rows
-  all_distinct(First_Block),                        % make sure all cells in block are distinct
-  validate_row_blocks(Block_Length, Rest).          % recursively validate rest of blocks in this set of rows
+  split_at(Block_Length, List, First_Block, Rest),      % get first block from this set of rows
+  all_distinct(First_Block),                            % make sure all cells in block are distinct
+  validate_row_blocks(Block_Length, Rest).              % recursively validate rest of blocks in this set of rows
 
 print_solution([]).
 print_solution([Head|Tail]) :-
