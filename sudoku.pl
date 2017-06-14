@@ -1,4 +1,4 @@
-:- module(sudoku, [sudoku/1])
+:- module(sudoku, [sudoku/1]).
 :- use_module(library(clpfd)).
 :- use_module(library(list_util), [split_at/4]).
 
