@@ -3,10 +3,9 @@
 
 # Sudoku Solver
 Sudoku solver in Prolog.  This Sudoku solver will solve any NxN puzzle it's given.  This implementation uses [SWI Prolog](http://www.swi-prolog.org/).
-This implementation uses a Docker container to isolate the execution environment.
 
 ## Usage
-To interact with the Sudoku solver, follow the steps below.
+This implementation uses a Docker container to isolate the execution environment.
 
 ### Prerequisites
 - [Docker](https://docs.docker.com/engine/installation/)
