@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jeremy-miller/sudoku.svg?branch=master)](https://travis-ci.org/jeremy-miller/sudoku)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
 [![SWI Prolog Version](https://img.shields.io/badge/SWI%20Prolog-7.5-blue.svg)]()
 
