@@ -1,0 +1,12 @@
+sudo: required
+language: sh
+dist: xenial
+group: edge
+before_install:
+  - sudo add-apt-repository ppa:swi-prolog/stable
+  - sudo apt-get update -q
+install:
+  - sudo apt-get install swi-prolog
+  - swipl -g "pack_install(list_util, [interactive(false), silent(true)])." -t halt.
+script:
+  - swipl -s sudoku.pl -g "load_test_files(sudoku)." -g "run_tests." -t halt.
