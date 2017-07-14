@@ -30,3 +30,6 @@ $ docker run -it jeremy-miller/sudoku swipl -s sudoku.pl -g "sudoku([[_,_,2,3],[
 |1|2|3|4|
 |3|4|1|2|
 ```
+
+## License
+[MIT](https://github.com/jeremy-miller/sudoku/blob/master/LICENSE)
