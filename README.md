@@ -5,13 +5,21 @@
 # Sudoku Solver
 Sudoku solver in Prolog.  This Sudoku solver will solve any NxN puzzle it's given.  This implementation uses [SWI Prolog](http://www.swi-prolog.org/).
 
+- [Usage](#usage)
+  - [Prerequisites](#prerequisites)
+  - [Build](#build)
+  - [Test](#test)
+  - [Run](#run)
+  - [Example Run](#example-run)
+- [License](#license)
+
 ## Usage
 This implementation uses a Docker container to isolate the execution environment.
 
 ### Prerequisites
 - [Docker](https://docs.docker.com/engine/installation/)
 
-### Setup
+### Build
 Before interacting with the Sudoku solver, the Docker container must be built: ```docker build -t jeremymiller/sudoku .```
 
 ### Test
