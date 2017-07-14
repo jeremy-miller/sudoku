@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t jeremymiller/sudoku .
 script:
-  - docker run -it jeremy-miller/sudoku swipl -s sudoku.pl -g "load_test_files(sudoku)." -g "run_tests." -t halt.
+  - docker run -it jeremymiller/sudoku swipl -s sudoku.pl -g "load_test_files(sudoku)." -g "run_tests." -t halt.
