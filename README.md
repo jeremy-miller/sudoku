@@ -22,10 +22,9 @@ To get a solution to a Sudoku puzzle, you must pass the puzzle as a list of list
 
 To run the Sudoku solver with a puzzle, execute the following command (substituting your ```<puzzle>```): ```docker run -it jeremy-miller/sudoku swipl -s sudoku.pl -g "sudoku(<puzzle>)" -t halt.```
 
-An example of a complete command, including the puzzle, looks like this: ```docker run -it jeremy-miller/sudoku swipl -s sudoku.pl -g "sudoku([[_,_,2,3],[_,_,_,_],[_,_,_,_],[3,4,_,_]])" -t halt.```
-
-The output looks like this:
-```
+### Example Run
+```prolog
+$ docker run -it jeremy-miller/sudoku swipl -s sudoku.pl -g "sudoku([[_,_,2,3],[_,_,_,_],[_,_,_,_],[3,4,_,_]])" -t halt.
 |4|1|2|3|
 |2|3|4|1|
 |1|2|3|4|
