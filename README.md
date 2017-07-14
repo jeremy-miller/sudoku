@@ -5,6 +5,7 @@
 # Sudoku Solver
 Sudoku solver in Prolog.  This Sudoku solver will solve any NxN puzzle it's given.  This implementation uses [SWI Prolog](http://www.swi-prolog.org/).
 
+- [Motivation](#motivation)
 - [Usage](#usage)
   - [Prerequisites](#prerequisites)
   - [Build](#build)
@@ -12,6 +13,9 @@ Sudoku solver in Prolog.  This Sudoku solver will solve any NxN puzzle it's give
   - [Run](#run)
   - [Example Run](#example-run)
 - [License](#license)
+
+## Motivation
+I create this project to learn Prolog.
 
 ## Usage
 This implementation uses a Docker container to isolate the execution environment.
