@@ -11,7 +11,7 @@ Sudoku solver in Prolog.  This Sudoku solver will solve any NxN puzzle it's give
   - [Build](#build)
   - [Test](#test)
   - [Run](#run)
-  - [Example Run](#example-run)
+  - [Example Call](#example-call)
 - [License](#license)
 
 ## Motivation
@@ -34,7 +34,7 @@ To get a solution to a Sudoku puzzle, you must pass the puzzle as a list of list
 
 To run the Sudoku solver with a puzzle, execute the following command (substituting your ```<puzzle>```): ```docker run -it jeremymiller/sudoku swipl -s sudoku.pl -g "sudoku(<puzzle>)" -t halt.```
 
-### Example Run
+### Example Call
 ```
 $ docker run -it jeremymiller/sudoku swipl -s sudoku.pl -g "sudoku([[_,_,2,3],[_,_,_,_],[_,_,_,_],[3,4,_,_]])" -t halt.
 |4|1|2|3|
