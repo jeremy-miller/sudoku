@@ -15,7 +15,7 @@ Sudoku solver in Prolog.  This Sudoku solver will solve any NxN puzzle it's give
 - [License](#license)
 
 ## Motivation
-I create this project to learn Prolog.
+I create this project to try Prolog.
 
 ## Usage
 This implementation uses a Docker container to isolate the execution environment.
