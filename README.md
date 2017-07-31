@@ -5,14 +5,18 @@
 # Sudoku Solver
 Sudoku solver in Prolog.  This Sudoku solver will solve any NxN puzzle it's given.  This implementation uses [SWI Prolog](http://www.swi-prolog.org/).
 
-- [Motivation](#motivation)
-- [Usage](#usage)
-  - [Prerequisites](#prerequisites)
-  - [Build](#build)
-  - [Test](#test)
-  - [Run](#run)
-  - [Example Call](#example-call)
-- [License](#license)
+<details>
+<summary><strong>Table of Contents</strong></summary>
+
+* [Motivation](#motivation)
+* [Usage](#usage)
+  + [Prerequisites](#prerequisites)
+  + [Build](#build)
+  + [Test](#test)
+  + [Run](#run)
+  + [Example Call](#example-call)
+* [License](#license)
+</details>
 
 ## Motivation
 I create this project to try Prolog.
