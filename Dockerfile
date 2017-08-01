@@ -1,4 +1,4 @@
-FROM swipl/swipl
+FROM swipl/swipl:latest
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 # install dependency
