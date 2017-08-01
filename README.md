@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/jeremy-miller/sudoku.svg?branch=master)](https://travis-ci.org/jeremy-miller/sudoku)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e3ef620f3fa1428fa08c7e2c291a358b)](https://www.codacy.com/app/jgmiller88/sudoku)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jeremy-miller/sudoku/blob/master/LICENSE)
 [![SWI Prolog Version](https://img.shields.io/badge/SWI%20Prolog-7.5-blue.svg)]()
 
